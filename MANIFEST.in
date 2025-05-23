@@ -1,0 +1,2 @@
+include aceternity/*.json
+recursive-include aceternity *.json
