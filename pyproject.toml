@@ -4,6 +4,12 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
-dependencies = [
-    "mcp[cli]",
-]
+dependencies = ["mcp"]                    # 删除 [cli]，只用 mcp
+
+[project.scripts]
+aceternity-mcp-server = "aceternity.main:main"
+
+
+[tool.hatch.build.targets.wheel]
+packages = ["aceternity"]
+include = ["aceternity/*.json"]
